@@ -2,56 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Booking Confirmed | Fusion Fashion Fest</title>
+  <title>Ticket Booking</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff8f5;
-      color: #333;
-      text-align: center;
-      padding: 60px 20px;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f5f5f5;
     }
-    .success-box {
-      max-width: 600px;
+    .form-container {
+      max-width: 400px;
       margin: auto;
+      background: white;
       padding: 30px;
-      background: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1 {
-      color: #27ae60;
-      font-size: 32px;
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
     }
-    p {
-      font-size: 18px;
-      margin: 15px 0;
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
-    .btn {
-      background-color: #d3a946;
-      color: #fff;
-      padding: 12px 24px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .btn:hover {
-      background-color: #c19535;
+    button:hover {
+      background-color: #2563eb;
     }
   </style>
 </head>
 <body>
 
-  <div class="success-box">
-    <h1>🎟️ Booking Confirmed!</h1>
-    <p>Thank you for booking your ticket to <strong>Fusion Fashion Fest</strong>.</p>
-    <p>We look forward to seeing you on <strong>20th July</strong> at <strong>Shourya Convention Center, Yousufguda, Hyderabad</strong>.</p>
-    <p>Keep an eye on your inbox — your ticket and details have been emailed.</p>
-    <a href="https://www.instagram.com/haniis_designer_studio" class="btn">Follow Us on Instagram</a>
+  <div class="form-container">
+    <h2>Book Your Ticket</h2>
+    
+    <form id="ticketForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <button type="submit">Book Now</button>
+    </form>
   </div>
+
+  <script>
+    document.getElementById("ticketForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop actual form submission
+      // Simulate a successful booking
+      window.location.href = "https://harshikimmi18.github.io/Success-page/";
+    });
+  </script>
 
 </body>
 </html>
